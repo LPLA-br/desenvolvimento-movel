@@ -8,7 +8,7 @@ import Rodape from '../components/global/Rodape';
 export default function HomeLayout()
 {
   return (
-    <View>
+    <View >
       <Cabecalho tituloPrincipal={"Calculadora Marciana"} />
       <Slot />
       <Rodape/>
