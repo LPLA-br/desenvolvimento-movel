@@ -3,17 +3,16 @@ import { View, Button, Image } from 'react-native';
 import { ScrollView, StyleSheet } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { SafeAreaView } from 'react-native';
-import Teclado from '../../components/Teclado';
+
+import Teclado from '../components/calculadora/Teclado';
+import Display from '../components/calculadora/Display';
 
 export default function Calculadora()
 {
   return (
     <SafeAreaView>
-        <Teclado/>
+      <Display/>
+      <Teclado/>
     </SafeAreaView>
   );
 }
-
-const styles = StyleSheet.create(
-  {}
-);

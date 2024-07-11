@@ -1,7 +1,7 @@
 /* ESTILIZAÇÃO DA TELA INICIAL */
 import { StyleSheet } from "react-native";
 
-const estilos = StyleSheet.create(
+const estiloTeclado = StyleSheet.create(
 {
   container:
   {
@@ -20,5 +20,5 @@ const estilos = StyleSheet.create(
   }
 });
 
-export { estilos };
+export { estiloTeclado };
 

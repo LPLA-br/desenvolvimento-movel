@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
 
-const estilos = StyleSheet.create(
+const estiloCabecalho = StyleSheet.create(
 {
   cabecalho:
   {
@@ -14,5 +14,5 @@ const estilos = StyleSheet.create(
   }
 });
 
-export { estilos };
+export { estiloCabecalho };
 
