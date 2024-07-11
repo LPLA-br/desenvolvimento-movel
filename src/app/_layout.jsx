@@ -7,7 +7,7 @@ export default function HomeLayout()
 {
   return (
     <>
-      <Cabecalho className={'cabecalho'} texto={"CONIUNGERE ET DECLINARE"} />
+      <Cabecalho className={'cabecalho'} texto={"Desenvolvimento Móvel"} />
       <Slot />
       <Rodape className={'rodape'} />
     </>
