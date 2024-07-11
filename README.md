@@ -1,9 +1,10 @@
-# CONIUNGERE ET DECLINARE
+# EXPO DOCERE
 
-Projeto de aplicação de conjugação de verbos e
-declinação de substantivos latinos
-para disciplinas dos cursos de Letras.
+Repositório referente a exigências da disciplina
+de desenvolvimento móvel.
 
+Para iniciar o servidor em ambiente linux apenas execute
+o shellscript:
 ```
 $ ./start.sh
 ```
