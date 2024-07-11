@@ -1,20 +1,26 @@
-import { View, Button } from 'react-native';
+import { View, Pressable, Text } from 'react-native';
 
-import CamadaDeBotoes from './CamadaDeBotoes';
+import QuadBotao from './Quadbotao';
+import Tribotao from './Tribotao';
+import { estiloTeclado } from '@/src/styles/teclado';
+import { estiloCalculadora } from '@/src/styles/calculadora';
 
 export default function Teclado()
 {
+  //ausência de delta quebra o wrap
   return (
-    <View>
-      <CamadaDeBotoes alpha="off" beta="√" gama="%" delta="/"></CamadaDeBotoes>
-      <CamadaDeBotoes alpha="7" beta="8" gama="9" delta="X"></CamadaDeBotoes>
-      <CamadaDeBotoes alpha="4" beta="5" gama="6" delta="-"></CamadaDeBotoes>
-      <View>
-        <View>
-          <CamadaDeBotoes alpha="1" beta="2" gama="3"></CamadaDeBotoes>
-          <CamadaDeBotoes alpha="0" beta="." gama="="></CamadaDeBotoes>
+    <View style={estiloCalculadora.corpo}>
+      <QuadBotao alpha="off" beta="√" gama="%" delta="/"></QuadBotao>
+      <QuadBotao alpha="7" beta="8" gama="9" delta="X"></QuadBotao>
+      <QuadBotao alpha="4" beta="5" gama="6" delta="-"></QuadBotao>
+      <View style={estiloTeclado.descontinuidade} >
+        <View style={estiloTeclado.tribotoesDaDescontinuidade}>
+          <Tribotao alpha="1" beta="2" gama="3"></Tribotao>
+          <Tribotao alpha="0" beta="." gama="="></Tribotao>
         </View>
-        <Button>+</Button>
+        <Pressable style={estiloTeclado.botaoSoma}>
+          <Text> + </Text>
+        </Pressable>
       </View>
     </View>
   );

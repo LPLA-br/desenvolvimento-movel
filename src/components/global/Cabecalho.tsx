@@ -1,13 +1,15 @@
+import React from "react";
 import { Text, View } from "react-native";
+import { TCabecalho } from "../types";
 
-export default function Cabecalho( { texto } )
+import { estiloCabecalho } from "@/src/styles/cabecalho";
+
+export default function Cabecalho( props: TCabecalho )
 {
   return (
-    <>
-      <View >
-        <Text > {texto} </Text>
-      </View>
-    </>
+    <View style={estiloCabecalho.area}>
+      <Text > { props.tituloPrincipal } </Text>
+    </View>
   );
 };
 

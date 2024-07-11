@@ -1,5 +1,5 @@
 
-type LinhaBotoes =
+type TLinhaBotoes =
 {
   alpha: string,
   beta: string,
@@ -7,5 +7,15 @@ type LinhaBotoes =
   delta?: string,
 };
 
-export { LinhaBotoes };
+type TCabecalho =
+{
+  tituloPrincipal: string
+};
+
+type TBotao =
+{
+  titulo: string
+};
+
+export { TLinhaBotoes, TCabecalho, TBotao };
 
