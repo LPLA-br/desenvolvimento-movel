@@ -1,5 +1,7 @@
 import { StyleSheet } from "react-native";
-import { estiloCalculadora } from "./calculadora";
+import Colors from "../constants/Colors";
+
+const margem: number = 2;
 
 const estiloTeclado = StyleSheet.create(
 {
@@ -8,24 +10,26 @@ const estiloTeclado = StyleSheet.create(
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'center',
-    //alignContent: 'justifyContent',
+    alignItems: 'center',
     flexWrap: 'nowrap',
   },
   botao:
   {
-    backgroundColor: '#b5bf9f',
+    backgroundColor: Colors.azulEsverdeadoFinado,
     borderColor: "#0f0f0f",
     borderWidth: 1,
     height: 32,
-    width: 32
+    width: 32,
+    margin: margem
   },
   botaoSoma:
   {
-    backgroundColor: '#b5bf9f',
+    backgroundColor: Colors.azulEsverdeadoFinado,
     borderColor: "#0f0f0f",
     borderWidth: 1,
-    height: 64,
-    width: 32
+    height: '95%',
+    width: 32,
+    margin: margem
   },
   descontinuidade:
   {

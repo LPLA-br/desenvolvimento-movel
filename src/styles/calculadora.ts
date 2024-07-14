@@ -4,11 +4,17 @@ const estiloCalculadora = StyleSheet.create(
 {
   corpo:
   {
-    borderWidth: 1,
-    borderColor: '#0f0f0f',
-    maxWidth: 256,
-    height: 256,
-    margin: 64
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    minWidth: 256,
+  },
+  imagem:
+  {
+    flex: 1,
+    resizeMode: 'cover',
+    justifyContent: 'center',
   }
 });
 

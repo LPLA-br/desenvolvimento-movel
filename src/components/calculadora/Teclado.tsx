@@ -3,13 +3,12 @@ import { View, Pressable, Text } from 'react-native';
 import QuadBotao from './Quadbotao';
 import Tribotao from './Tribotao';
 import { estiloTeclado } from '@/src/styles/teclado';
-import { estiloCalculadora } from '@/src/styles/calculadora';
 
 export default function Teclado()
 {
-  //ausência de delta quebra o wrap
+  //ausência de "delta" quebra o wrap para renderização condicional.
   return (
-    <View style={estiloCalculadora.corpo}>
+    <View>
       <QuadBotao alpha="off" beta="√" gama="%" delta="/"></QuadBotao>
       <QuadBotao alpha="7" beta="8" gama="9" delta="X"></QuadBotao>
       <QuadBotao alpha="4" beta="5" gama="6" delta="-"></QuadBotao>

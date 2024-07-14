@@ -1,13 +1,20 @@
 /* ESTILIZAÇÃO DA TELA INICIAL */
 import { StyleSheet } from "react-native";
+import Colors from "../constants/Colors";
 
 const estiloRodape = StyleSheet.create(
 {
   area:
   {
-    backgroundColor: '#c1440e',
+    backgroundColor: Colors.avermelhado,
     padding: 10,
-    alignContent: "center"
+    alignContent: "center",
+  },
+  texto:
+  {
+    fontFamily: 'MartianMono',
+    fontSize: 20,
+    textAlign: 'center',
   }
 });
 
