@@ -6,7 +6,7 @@ import Cabecalho from '../components/global/Cabecalho';
 import Rodape from '../components/global/Rodape';
 import { estiloCalculadora } from '@/src/styles/calculadora';
 
-const image = {uri: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/OSIRIS_Mars_true_color.jpg/800px-OSIRIS_Mars_true_color.jpg"};
+const image = {uri: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Arsia_Mons_Cloud_-_Mars_Express_-_Flickr_-_jccwrt.png/800px-Arsia_Mons_Cloud_-_Mars_Express_-_Flickr_-_jccwrt.png"};
 
 export default function HomeLayout()
 {

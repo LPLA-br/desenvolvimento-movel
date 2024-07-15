@@ -20,7 +20,9 @@ const estiloTeclado = StyleSheet.create(
     borderWidth: 1,
     height: 32,
     width: 32,
-    margin: margem
+    margin: margem,
+    fontFamily: "MartianMono",
+    textAlign: 'center'
   },
   botaoSoma:
   {
@@ -29,7 +31,9 @@ const estiloTeclado = StyleSheet.create(
     borderWidth: 1,
     height: '95%',
     width: 32,
-    margin: margem
+    margin: margem,
+    fontFamily: "MartianMono",
+    textAlign: 'center'
   },
   descontinuidade:
   {
