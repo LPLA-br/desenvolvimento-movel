@@ -2,20 +2,15 @@ import { StyleSheet } from "react-native";
 
 const estiloCalculadora = StyleSheet.create(
 {
-  corpo:
+  areaCentral:
   {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
     minWidth: 256,
-  },
-  imagem:
-  {
-    flex: 1,
-    resizeMode: 'cover',
-    justifyContent: 'center',
+    border: "3px solid blue"
   }
 });
 
-export { estiloCalculadora };
+export default estiloCalculadora;

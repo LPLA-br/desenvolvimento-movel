@@ -4,7 +4,7 @@ import * as SplashScreen from "expo-splash-screen";
 import { Text, View } from "react-native";
 import { TCabecalho } from "../types";
 
-import { estiloCabecalho } from "@/src/styles/cabecalho";
+import estiloCabecalho from "@/src/styles/cabecalho";
 
 SplashScreen.preventAutoHideAsync();
 

@@ -18,5 +18,4 @@ const estiloRodape = StyleSheet.create(
   }
 });
 
-export { estiloRodape };
-
+export default estiloRodape;

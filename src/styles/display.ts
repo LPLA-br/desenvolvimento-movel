@@ -5,12 +5,12 @@ const estiloDisplay = StyleSheet.create(
 {
   tela:
   {
-    backgroundColor: "#f0f0f0",
+    backgroundColor: Colors.azulEsverdeadoFinado,
     color: "#ffffff",
-    width: 128,
+    width: (64*4),
     margin: 10,
     border: ('2px solid '.concat(Colors.avermelhado))
   }
 });
 
-export { estiloDisplay };
+export default estiloDisplay;

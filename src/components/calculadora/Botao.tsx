@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 import { useContext } from 'react';
 import { CharList } from './Contexto';
 
-import { estiloTeclado } from '@/src/styles/teclado';
+import { ids, styles } from '@/src/styles/botao';
 import { TBotao } from '../types';
 
 SplashScreen.preventAutoHideAsync();
@@ -52,31 +52,31 @@ export default function Botao( props: TBotao )
   if ( props.titulo == "=" )
   {
     return (
-      <Pressable style={estiloTeclado.botao} onPress={avaliarStringDeExpressaoMatematica}>
-        <Text> {props.titulo} </Text>
+      <Pressable style={styles.botao} dataSet={{ media: ids.botao }} onPress={avaliarStringDeExpressaoMatematica}>
+        <Text style={styles.botaoTexto}> {props.titulo} </Text>
       </Pressable>
     );
   }
-  else if ( props.titulo == "del" )
+  else if ( props.titulo == "C" )
   {
     return (
-      <Pressable style={estiloTeclado.botao} onPress={limparDisplay}>
-        <Text> {props.titulo} </Text>
+      <Pressable style={styles.botao} dataSet={{ media: ids.botao }} onPress={limparDisplay}>
+        <Text style={styles.botaoTexto}> {props.titulo} </Text>
       </Pressable>
     );
   }
   else if ( props.titulo == "+" )
   {
     return (
-      <Pressable style={estiloTeclado.botaoSoma} onPress={adicionarCaractereACharList}>
-        <Text> {props.titulo} </Text>
+      <Pressable style={styles.botaoSoma} dataSet={{ media: ids.botao }} onPress={adicionarCaractereACharList}>
+        <Text style={styles.botaoTexto}> {props.titulo} </Text>
       </Pressable>
     );
   }
   else
     return (
-      <Pressable style={estiloTeclado.botao} onPress={adicionarCaractereACharList}>
-        <Text> {props.titulo} </Text>
+      <Pressable style={styles.botao} dataSet={{ media: ids.botao }} onPress={adicionarCaractereACharList}>
+        <Text style={styles.botaoTexto}> {props.titulo} </Text>
       </Pressable>
     );
 };

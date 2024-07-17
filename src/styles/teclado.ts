@@ -1,52 +1,53 @@
 import { StyleSheet } from "react-native";
-import Colors from "../constants/Colors";
+import { DimensionValue } from "react-native";
 
-const margem: number = 2;
+const larguraTriQuadTeclas: DimensionValue = "100%";
 
 const estiloTeclado = StyleSheet.create(
 {
-  camada:
+  teclado:
+  {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    border: "3px solid green",
+    width: "90%",
+  },
+  tribotao:
   {
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
     flexWrap: 'nowrap',
+    border: "1px solid red"
   },
-  botao:
-  {
-    backgroundColor: Colors.azulEsverdeadoFinado,
-    borderColor: "#0f0f0f",
-    borderWidth: 1,
-    height: 32,
-    width: 32,
-    margin: margem,
-    fontFamily: "MartianMono",
-    textAlign: 'center'
-  },
-  botaoSoma:
-  {
-    backgroundColor: Colors.azulEsverdeadoFinado,
-    borderColor: "#0f0f0f",
-    borderWidth: 1,
-    height: '95%',
-    width: 32,
-    margin: margem,
-    fontFamily: "MartianMono",
-    textAlign: 'center'
-  },
-  descontinuidade:
+  quadbotao:
   {
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'center',
-    flexWrap: 'nowrap'
+    alignItems: 'center',
+    flexWrap: 'nowrap',
+    border: "1px solid orange",
+    width: larguraTriQuadTeclas
   },
-  tribotoesDaDescontinuidade:
+  segregacaoSomaEDemais:
+  {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexWrap: 'nowrap',
+    border: "1px solid purple",
+    width: larguraTriQuadTeclas
+  },
+  tribotoes:
   {
     display: 'flex',
     flexDirection: 'column',
   }
 });
 
-export { estiloTeclado };
+export default estiloTeclado;

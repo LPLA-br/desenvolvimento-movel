@@ -3,7 +3,7 @@ import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
 import { View, Text } from "react-native";
 
-import { estiloRodape } from '@/src/styles/rodape';
+import estiloRodape from '@/src/styles/rodape';
 
 SplashScreen.preventAutoHideAsync();
 

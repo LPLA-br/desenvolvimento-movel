@@ -16,5 +16,5 @@ const estiloCabecalho = StyleSheet.create(
   }
 });
 
-export { estiloCabecalho };
+export default estiloCabecalho;
 
