@@ -11,7 +11,7 @@ const estiloCabecalho = StyleSheet.create(
   texto:
   {
     fontFamily: 'MartianMono',
-    fontSize: 30,
+    fontSize: "100%",
     textAlign: 'center'
   }
 });

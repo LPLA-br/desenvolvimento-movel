@@ -49,11 +49,15 @@ export default function Botao( props: TBotao )
     setCharlist('');
   }
 
+  //subcomponente
+  function gerarBotao( fn: Function )
+  { }
+
   if ( props.titulo == "=" )
   {
     return (
       <Pressable style={styles.botao} dataSet={{ media: ids.botao }} onPress={avaliarStringDeExpressaoMatematica}>
-        <Text style={styles.botaoTexto}> {props.titulo} </Text>
+        <Text selectable={false} style={styles.botaoTexto} dataSet={{ media: ids.botaoTexto }}> {props.titulo} </Text>
       </Pressable>
     );
   }
@@ -61,22 +65,22 @@ export default function Botao( props: TBotao )
   {
     return (
       <Pressable style={styles.botao} dataSet={{ media: ids.botao }} onPress={limparDisplay}>
-        <Text style={styles.botaoTexto}> {props.titulo} </Text>
+        <Text selectable={false} style={styles.botaoTexto} dataSet={{ media: ids.botaoTexto }}> {props.titulo} </Text>
       </Pressable>
     );
   }
   else if ( props.titulo == "+" )
   {
     return (
-      <Pressable style={styles.botaoSoma} dataSet={{ media: ids.botao }} onPress={adicionarCaractereACharList}>
-        <Text style={styles.botaoTexto}> {props.titulo} </Text>
+      <Pressable style={styles.botaoSoma} dataSet={{ media: ids.botaoSoma }} onPress={adicionarCaractereACharList}>
+        <Text selectable={false} style={styles.botaoTexto} dataSet={{ media: ids.botaoTexto }}> {props.titulo} </Text>
       </Pressable>
     );
   }
   else
     return (
       <Pressable style={styles.botao} dataSet={{ media: ids.botao }} onPress={adicionarCaractereACharList}>
-        <Text style={styles.botaoTexto}> {props.titulo} </Text>
+        <Text selectable={false} style={styles.botaoTexto} dataSet={{ media: ids.botaoTexto }}> {props.titulo} </Text>
       </Pressable>
     );
 };

@@ -13,7 +13,7 @@ const estiloRodape = StyleSheet.create(
   texto:
   {
     fontFamily: 'MartianMono',
-    fontSize: 20,
+    fontSize: "100%",
     textAlign: 'center',
   }
 });

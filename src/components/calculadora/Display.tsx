@@ -1,7 +1,7 @@
 import { View, Text } from "react-native";
 import { useContext } from "react";
 
-import estiloDisplay from "@/src/styles/display";
+import { ids, styles } from "../../styles/display.ts";
 import { CharList } from "./Contexto";
 
 export default function Display()
@@ -10,8 +10,8 @@ export default function Display()
   const [ charList, setCharlist ] = useContext( CharList );
 
   return (
-    <View style={estiloDisplay.tela}>
-      <Text> { charList } </Text>
+    <View style={styles.tela} dataSet={{ media: ids.tela }}>
+      <Text style={styles.textoDinamico} dataSet={{ media: ids.textoDinamico }}> { charList } </Text>
     </View>
   );
 }

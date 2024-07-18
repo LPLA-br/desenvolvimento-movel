@@ -2,15 +2,17 @@
 
 Avalie suas operações matemáticas diante de deslumbrantes imagens do planeta vermelho !
 
-Repositório referente a exigências da disciplina
-de desenvolvimento móvel.
+Para iniciar o servidor expo em ambiente linux apenas execute o shellscript:
 
-Para iniciar o servidor expo em ambiente linux apenas execute
-o script:
+```bash
+./start.sh
+```
+Se estiveres em ambiente Windows abra o cmd e execute no diretório onde
+fizeste teu download o seguinte comando:
 
 ```
-$ ./start.sh
 ```
+
 
 ## TESTES
 
