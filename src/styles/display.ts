@@ -13,7 +13,7 @@ const { ids, styles } = StyleSheet.create(
     '@media (max-width: 1024px) and (min-width: 768px)':
     {
       width: ((96*4)+(BOTAOMARGEM*6)+(BOTAOBORDA*6)),
-      height: 48-8
+      height: 48
     },
     '@media (max-width: 768px) and (min-width: 376px)': 
     {

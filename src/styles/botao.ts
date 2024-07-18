@@ -19,17 +19,17 @@ const { ids, styles } = StyleSheet.create(
         * */
         height: (96/4)
       },
-      '@media (max-width: 1024px) and (min-width: 768px)':
+      '@media (max-width: 1024px) and (min-width: 768px) and (orientation: portrait)':
       {
         height: 96,
         width: 96,
       },
-      '@media (max-width: 768px) and (min-width: 376px)': 
+      '@media (max-width: 768px) and (min-width: 376px) and (orientation: portrait)': 
       {
         height: 80,
         width: 80,
       },
-      '@media (max-width: 376px)': 
+      '@media (max-width: 376px) and (orientation: portrait)': 
       {
         height: 48,
         width: 48,
@@ -50,17 +50,17 @@ const { ids, styles } = StyleSheet.create(
         //quarta parte da altura normal do botão
         height: (((96/4)*2)+(BOTAOMARGEM*2)+(BOTAOBORDA*2))
       },
-      '@media (max-width: 1024px) and (min-width: 768px)':
+      '@media (max-width: 1024px) and (min-width: 768px) and (orientation: portrait)':
       {
         height: ((96*2)+(BOTAOMARGEM*2)+(BOTAOBORDA*2)),
         width: 96,
       },
-      '@media (max-width: 768px) and (min-width: 376px)': 
+      '@media (max-width: 768px) and (min-width: 376px) and (orientation: portrait)': 
       {
         height: ((80*2)+BOTAOMARGEM*2),
         width: 80,
       },
-      '@media (max-width: 376px)': 
+      '@media (max-width: 376px) and (orientation: portrait)': 
       {
         height: ((48*2)+BOTAOMARGEM*2),
         width: 48,
@@ -73,9 +73,9 @@ const { ids, styles } = StyleSheet.create(
     {
       textAlign: 'center',
       fontSize: "4vw",
-      '@media (max-height: 725px)':
+      '@media (max-height: 725px) and (orientation: landscape)':
       {
-        fontSize: "2vh"
+        fontSize: "4vh"
       },
     }
   }

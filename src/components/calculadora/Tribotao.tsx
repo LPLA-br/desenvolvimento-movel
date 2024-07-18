@@ -4,6 +4,9 @@ import { TLinhaBotoes } from '../types';
 import Botao from './Botao';
 import estiloTeclado from '@/src/styles/teclado';
 
+/** Subcomponente de Teclado agregador de Botao
+ * para três instâncias em linha.
+* */
 export default function Tribotao( props: TLinhaBotoes )
 {
   return (

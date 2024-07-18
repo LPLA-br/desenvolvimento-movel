@@ -11,6 +11,11 @@ import { TBotao } from '../types';
 
 SplashScreen.preventAutoHideAsync();
 
+/** SubComponente de Botao para emprego nas subestruturas
+ *  do Teclado: Quadbotao e Tribotao. Atua como entrada
+ *  para construção de expressões matemáticas avaliáveis
+ *  por eval()
+* */
 export default function Botao( props: TBotao )
 {
 
@@ -49,39 +54,38 @@ export default function Botao( props: TBotao )
     setCharlist('');
   }
 
-  //subcomponente
-  function gerarBotao( fn: Function )
-  { }
+  /** Subcomponente que recebe: funcao de ação do botao,
+  * presionavel e texto contendo styles e ids. Definição de tipos
+  * não existente.*/
+  function gerarBotao( fn: any, styles: any, ids: any, soma?: boolean )
+  {
+    if ( soma == true ) return (
+      <Pressable style={styles.botaoSoma} dataSet={{ media: ids.botaoSoma }} onPress={fn}>
+        <Text selectable={false} style={styles.botaoTexto} dataSet={{ media: ids.botaoTexto }}> {props.titulo} </Text>
+      </Pressable>
+    );
+    return (
+      <Pressable style={styles.botao} dataSet={{ media: ids.botao }} onPress={fn}>
+        <Text selectable={false} style={styles.botaoTexto} dataSet={{ media: ids.botaoTexto }}> {props.titulo} </Text>
+      </Pressable>
+    );
+  }
 
   if ( props.titulo == "=" )
   {
-    return (
-      <Pressable style={styles.botao} dataSet={{ media: ids.botao }} onPress={avaliarStringDeExpressaoMatematica}>
-        <Text selectable={false} style={styles.botaoTexto} dataSet={{ media: ids.botaoTexto }}> {props.titulo} </Text>
-      </Pressable>
-    );
+   return gerarBotao( avaliarStringDeExpressaoMatematica, styles, ids );
   }
   else if ( props.titulo == "C" )
   {
-    return (
-      <Pressable style={styles.botao} dataSet={{ media: ids.botao }} onPress={limparDisplay}>
-        <Text selectable={false} style={styles.botaoTexto} dataSet={{ media: ids.botaoTexto }}> {props.titulo} </Text>
-      </Pressable>
-    );
+    return gerarBotao( limparDisplay, styles, ids );
   }
   else if ( props.titulo == "+" )
   {
-    return (
-      <Pressable style={styles.botaoSoma} dataSet={{ media: ids.botaoSoma }} onPress={adicionarCaractereACharList}>
-        <Text selectable={false} style={styles.botaoTexto} dataSet={{ media: ids.botaoTexto }}> {props.titulo} </Text>
-      </Pressable>
-    );
+    return gerarBotao( adicionarCaractereACharList, styles, ids, true );
   }
   else
-    return (
-      <Pressable style={styles.botao} dataSet={{ media: ids.botao }} onPress={adicionarCaractereACharList}>
-        <Text selectable={false} style={styles.botaoTexto} dataSet={{ media: ids.botaoTexto }}> {props.titulo} </Text>
-      </Pressable>
-    );
+  {
+    return gerarBotao( adicionarCaractereACharList, styles, ids );
+  }
 };
 

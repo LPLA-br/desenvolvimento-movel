@@ -9,6 +9,8 @@ import estiloCalculadora from "@/src/styles/calculadora";
 
 const CharList = createContext();
 
+/** Componente principal da suite de componentes
+* da calculadora. Reune Teclado e Display*/
 function Contexto()
 {
   const [ charlist, setCharlist ] = useState<string>(''); 

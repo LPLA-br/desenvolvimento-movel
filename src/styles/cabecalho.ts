@@ -1,7 +1,7 @@
-import { StyleSheet } from "react-native";
+import StyleSheet from "react-native-media-query";
 import Colors from "../constants/Colors";
 
-const estiloCabecalho = StyleSheet.create(
+const { styles, ids } = StyleSheet.create(
 {
   area:
   {
@@ -10,11 +10,14 @@ const estiloCabecalho = StyleSheet.create(
   },
   texto:
   {
-    fontFamily: 'MartianMono',
-    fontSize: "100%",
+    fontFamily: "MartianMono",
+    fontSize: "7vw",
+    '@media (orientation: landscape)':
+    {
+      fontSize: "2vw"
+    },
     textAlign: 'center'
   }
 });
 
-export default estiloCabecalho;
-
+export { styles, ids };

@@ -5,6 +5,9 @@ import Tribotao from './Tribotao';
 import estiloTeclado from '@/src/styles/teclado';
 import Botao from './Botao';
 
+/** Subcomponente de Contexto que contém
+* organização dos elementos de uma típica calculadora
+* */
 export default function Teclado()
 {
   //ausência de "delta" quebra o wrap para renderização condicional.

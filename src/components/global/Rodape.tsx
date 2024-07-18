@@ -7,6 +7,9 @@ import estiloRodape from '@/src/styles/rodape';
 
 SplashScreen.preventAutoHideAsync();
 
+/** Componente Rodape que contém assinatura
+ * de autoria do desenvolvedor.
+* */
 export default function Rodape()
 {
   const [loaded, error] = useFonts({

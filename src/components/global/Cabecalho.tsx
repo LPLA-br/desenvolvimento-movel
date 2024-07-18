@@ -4,10 +4,12 @@ import * as SplashScreen from "expo-splash-screen";
 import { Text, View } from "react-native";
 import { TCabecalho } from "../types";
 
-import estiloCabecalho from "@/src/styles/cabecalho";
+import { ids, styles } from "../../styles/cabecalho";
 
 SplashScreen.preventAutoHideAsync();
 
+/** Componente Cabecalho que contém o título do projeto
+* em fundo monocor.*/
 export default function Cabecalho( props: TCabecalho )
 {
 
@@ -30,8 +32,8 @@ export default function Cabecalho( props: TCabecalho )
     }
 
   return (
-    <View style={estiloCabecalho.area}>
-      <Text style={estiloCabecalho.texto}> { props.tituloPrincipal } </Text>
+    <View style={styles.area} dataSet={{media: ids.area}}>
+      <Text style={styles.texto} dataSet={{media: ids.texto}}> { props.tituloPrincipal } </Text>
     </View>
   );
 };

@@ -8,8 +8,7 @@ const estiloCalculadora = StyleSheet.create(
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    minWidth: 256,
-    border: "3px solid blue"
+    minWidth: 256
   }
 });
 

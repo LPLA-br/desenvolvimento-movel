@@ -1,3 +1,7 @@
+/************************
+ * Típos de dados utilizados
+ * em componentes com props.
+*************************/
 
 type TLinhaBotoes =
 {

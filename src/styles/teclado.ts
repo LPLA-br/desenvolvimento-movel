@@ -11,7 +11,6 @@ const estiloTeclado = StyleSheet.create(
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    border: "3px solid green",
     width: "90%",
   },
   tribotao:
@@ -21,7 +20,6 @@ const estiloTeclado = StyleSheet.create(
     justifyContent: 'center',
     alignItems: 'center',
     flexWrap: 'nowrap',
-    border: "1px solid red"
   },
   quadbotao:
   {
@@ -30,7 +28,6 @@ const estiloTeclado = StyleSheet.create(
     justifyContent: 'center',
     alignItems: 'center',
     flexWrap: 'nowrap',
-    border: "1px solid orange",
     width: larguraTriQuadTeclas
   },
   segregacaoSomaEDemais:
@@ -40,7 +37,6 @@ const estiloTeclado = StyleSheet.create(
     justifyContent: 'center',
     alignItems: 'center',
     flexWrap: 'nowrap',
-    border: "1px solid purple",
     width: larguraTriQuadTeclas
   },
   tribotoes:

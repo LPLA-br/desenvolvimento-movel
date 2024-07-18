@@ -4,6 +4,10 @@ import { useContext } from "react";
 import { ids, styles } from "../../styles/display.ts";
 import { CharList } from "./Contexto";
 
+/* SubComponente de Contexto responsável
+ * por apresentar as informações manipuladas pelos
+ * componentes Botao.
+ * */
 export default function Display()
 {
 
