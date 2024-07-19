@@ -7,6 +7,8 @@ import { useContext } from 'react';
 import { CharList } from './Contexto';
 
 import { ids, styles } from '@/src/styles/botao';
+import estiloReservado from '@/src/styles/segregados'; 
+
 import { TBotao } from '../types';
 
 SplashScreen.preventAutoHideAsync();
@@ -56,14 +58,27 @@ export default function Botao( props: TBotao )
 
   /** Subcomponente que recebe: funcao de ação do botao,
   * presionavel e texto contendo styles e ids. Definição de tipos
-  * não existente.*/
-  function gerarBotao( fn: any, styles: any, ids: any, soma?: boolean )
+  * não existente.
+  * @param { any } fn - funcionalidade aplicada ao botao.
+  * @param { any } styles - estilos.
+  * @param { any } ids - ids dos estilos.
+  * @param { boolean | undefined } soma - é o botao de soma.
+  * @param { boolean | undefined } segregado - é um botão segregado.
+  * */
+  function gerarBotao( fn: any, styles: any, ids: any, soma?: boolean, segregado?: boolean )
   {
+
     if ( soma == true ) return (
-      <Pressable style={styles.botaoSoma} dataSet={{ media: ids.botaoSoma }} onPress={fn}>
+      <Pressable style={ [styles.botaoSoma, estiloReservado.botaoSegregado] } dataSet={{ media: ids.botaoSoma }} onPress={fn}>
         <Text selectable={false} style={styles.botaoTexto} dataSet={{ media: ids.botaoTexto }}> {props.titulo} </Text>
       </Pressable>
     );
+    else if ( segregado == true ) return (
+      <Pressable style={[styles.botao, estiloReservado.botaoSegregado]} dataSet={{ media: ids.botao }} onPress={fn}>
+        <Text selectable={false} style={styles.botaoTexto} dataSet={{ media: ids.botaoTexto }}> {props.titulo} </Text>
+      </Pressable>
+    );
+
     return (
       <Pressable style={styles.botao} dataSet={{ media: ids.botao }} onPress={fn}>
         <Text selectable={false} style={styles.botaoTexto} dataSet={{ media: ids.botaoTexto }}> {props.titulo} </Text>
@@ -71,21 +86,23 @@ export default function Botao( props: TBotao )
     );
   }
 
-  if ( props.titulo == "=" )
+  switch ( props.titulo )
   {
-   return gerarBotao( avaliarStringDeExpressaoMatematica, styles, ids );
-  }
-  else if ( props.titulo == "C" )
-  {
-    return gerarBotao( limparDisplay, styles, ids );
-  }
-  else if ( props.titulo == "+" )
-  {
-    return gerarBotao( adicionarCaractereACharList, styles, ids, true );
-  }
-  else
-  {
-    return gerarBotao( adicionarCaractereACharList, styles, ids );
+    case "C":
+      return gerarBotao( limparDisplay, styles, ids, false, true );
+    case "+":
+      return gerarBotao( adicionarCaractereACharList, styles, ids, true );
+    case "=":
+      return gerarBotao( avaliarStringDeExpressaoMatematica, styles, ids );
+    case "**":
+    case "*":
+    case "+":
+    case "-":
+    case "%":
+    case "/":
+      return gerarBotao( adicionarCaractereACharList, styles, ids, false, true );
+    default:
+      return gerarBotao( adicionarCaractereACharList, styles, ids );
   }
 };
 
