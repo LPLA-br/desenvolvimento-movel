@@ -72,7 +72,7 @@ const { ids, styles } = StyleSheet.create(
     botaoTexto:
     {
       textAlign: 'center',
-      fontSize: "4vw",
+      fontSize: "3vw",
       '@media (max-height: 725px) and (orientation: landscape)':
       {
         fontSize: "4vh"

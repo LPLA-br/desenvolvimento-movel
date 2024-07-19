@@ -10,6 +10,14 @@ const { ids, styles } = StyleSheet.create(
     backgroundColor: Colors.azulEsverdeadoFinado,
     color: Colors.marrom,
     width: ((96*4)+(BOTAOMARGEM*6)+(BOTAOBORDA*6)),
+    '@media (min-height: 1300px) and (orientation: portrait)':
+    {
+      height: 32*4,
+    },
+    '@media (min-height: 1000px) and (orientation: portrait)':
+    {
+      height: 32*2,
+    },
     '@media (max-width: 1024px) and (min-width: 768px)':
     {
       width: ((96*4)+(BOTAOMARGEM*6)+(BOTAOBORDA*6)),
